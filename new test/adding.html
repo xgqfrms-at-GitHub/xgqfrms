@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #paihang{
+            /*visibility: hidden;*/
+        }
+        .reset { padding-left: 20px; counter-reset: wangxiaoer; line-height: 1.6; color: #666; }
+        .counter:before { content: counters(wangxiaoer, '-') '. '; counter-increment: wangxiaoer; font-family: arial black; }
+    </style>
+</head>
+<body>
+<div>
+    <ul id="paihang">
+        <li><b></b> 测试a</li>
+        <li><b></b> 测试b</li>
+        <li><b></b> 测试c</li>
+        <li><b></b> 测试d</li>
+        <li><b></b> 测试e</li>
+        <li><b></b> 测试f</li>
+        <li><b></b> 测试g</li>
+        <li><b></b> 测试h</li>
+        <li><b></b> 测试i</li>
+    </ul>
+    <form action="?.php">
+        <input type="range" data-from="1" data-speed="1" data-to="100"/>
+    </form>
+    <script>
+        function a3(){
+            var k=document.getElementById("paihang").getElementsByTagName("b");
+            for(var i=0;i<k.length;i++){
+                k[i].innerHTML=i+1;
+            }
+        }
+        a3();
+    </script>
+</div>
+<div class="reset">
+    <div class="counter">我是王小二
+        <div class="reset">
+            <div class="counter">我是王小二的大儿子</div>
+            <div class="counter">我是王小二的二儿子
+                <div class="reset">
+                    <div class="counter">我是王小二的二儿子的大孙子</div>
+                    <div class="counter">我是王小二的二儿子的二孙子</div>
+                    <div class="counter">我是王小二的二儿子的小孙子</div>
+                </div>
+            </div>
+            <div class="counter">我是王小二的三儿子</div>
+        </div>
+    </div>
+    <div class="counter">我是王小三</div>
+    <div class="counter">我是王小四
+        <div class="reset">
+            <div class="counter">我是王小四的大儿子</div>
+        </div>
+    </div>
+</div>
+<div>
+
+    <script language="javascript">
+        <!--
+        a = 1; b = 10;
+        document.write('a = ',a,',b = ',b,'<br>');
+        a++;
+        document.write('a++ = ',a,'<br>');
+        b--;
+        document.write('b-- = ',b,'<br>');
+        //-->
+    </script>
+
+<br /><center>如不能显示效果，请按Ctrl+F5刷新本页，更多网页代码：<a href='http://www.veryhuo.com/' target='_blank'>http://www.veryhuo.com/</a></center>
+</div>
+</body>
+</html>

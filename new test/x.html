@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>css3配合js实现数字动态效果</title>
+    <style type="text/css">
+        #wrap {
+            width: 1000px;
+            margin: 100px auto;
+            background-color: #101010;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: red;
+        }
+        .test {
+            width: 60px;
+            height: 60px;
+            background-color: #006699;
+            color: #fff;
+            text-align: center;
+            font-size: 44px;
+            line-height: 60px;
+            display: inline-block;
+            -moz-transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            -ms-transition: all 0.4s ease;
+            font-family: tahoma;
+            margin: 0 5px;
+        }
+        .animation {
+            -moz-transform: scale3d(0, 0, 1);
+            -webkit-transform: scale3d(1, 0, 0);
+            -ms-transform: scale3d(1, 2, 0);
+            transform: scale3d(0, 0, 1);
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    xxxxxxxxx
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+    var transfer = {
+        init:function (data) {
+            this.last = data || new Date().getTime() + "";
+            this.oWrap = $("#wrap");
+            this.timer = null;
+            //
+            transfer.render(_this.last);
+            //
+            transfer.auto();
+        },
+        getDiff:function () {
+            var arr = this.last.split("");
+            var arr2 = this.iNow.split("");
+            var arr3 = [];
+            for (var i = 0; i < arr2.length; i++) {
+                if (arr[i] != arr2[i]) {
+                    arr3.push({"index":i, "val":arr2[i]});
+                }
+            }
+            this.last = this.iNow;
+            return arr3;
+        },
+        render:function (str) {
+            var arr = str.split("");
+            var len = arr.length;
+            var frag = '';
+            for (var i = 0; i < len; i++) {
+                frag += "<div class='test'>" + arr[i] + "</div>";
+            }
+            this.oWrap.html(frag);
+            this.el = this.oWrap.children();
+        },
+        auto:function () {
+            var _this = this;
+            clearInterval(this.timer);
+            this.timer = setInterval(function () {
+                var data = transfer.getDiff();
+                $.each(data, function (i, el) {
+                    _this.el.eq(el.index).addClass("animation");
+                    setTimeout(function () {
+                        _this.el.eq(el.index).removeClass("animation").html(el.val);
+                    }, 380);
+                });
+            }, 4000);
+        },
+        setData:function (data) {
+            this.iNow = data;
+        }
+    };
+    transfer.init();
+    setInterval(function () {
+        transfer.setData(new Date().getTime() + "")
+    }, 1000);
+</script>
+<iframe src="" frameborder="0">
+    <!DOCTYPE HTML>
+    <html lang="zh_CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>css3配合js实现数字动态效果</title>
+        <style type="text/css">
+            #wrap {
+                width: 1000px;
+                margin: 100px auto;
+            }
+            .test {
+                width: 60px;
+                height: 60px;
+                background-color: #006699;
+                color: #fff;
+                text-align: center;
+                font-size: 44px;
+                line-height: 60px;
+                display: inline-block;
+                -moz-transition: all 0.4s ease;
+                -webkit-transition: all 0.4s ease;
+                -ms-transition: all 0.4s ease;
+                font-family: tahoma;
+                margin: 0 5px;
+            }
+            .animation {
+                -moz-transform: scale3d(0, 0, 1);
+                -webkit-transform: scale3d(1, 0, 0);
+                -ms-transform: scale3d(1, 2, 0);
+                transform: scale3d(0, 0, 1);
+            }
+        </style>
+    </head>
+    <body>
+    <div id="wrap">
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        var transfer = {
+            init:function (data) {
+                this.last = data || new Date().getTime() + "";
+                this.oWrap = $("#wrap");
+                this.timer = null;
+                //
+                transfer.render(_this.last);
+                //
+                transfer.auto();
+            },
+            getDiff:function () {
+                var arr = this.last.split("");
+                var arr2 = this.iNow.split("");
+                var arr3 = [];
+                for (var i = 0; i < arr2.length; i++) {
+                    if (arr[i] != arr2[i]) {
+                        arr3.push({"index":i, "val":arr2[i]});
+                    }
+                }
+                this.last = this.iNow;
+                return arr3;
+            },
+            render:function (str) {
+                var arr = str.split("");
+                var len = arr.length;
+                var frag = '';
+                for (var i = 0; i < len; i++) {
+                    frag += "<div class='test'>" + arr[i] + "</div>";
+                }
+                this.oWrap.html(frag);
+                this.el = this.oWrap.children();
+            },
+            auto:function () {
+                var _this = this;
+                clearInterval(this.timer);
+                this.timer = setInterval(function () {
+                    var data = transfer.getDiff();
+                    $.each(data, function (i, el) {
+                        _this.el.eq(el.index).addClass("animation");
+                        setTimeout(function () {
+                            _this.el.eq(el.index).removeClass("animation").html(el.val);
+                        }, 380);
+                    });
+                }, 4000);
+            },
+            setData:function (data) {
+                this.iNow = data;
+            }
+        };
+        transfer.init();
+        setInterval(function () {
+            transfer.setData(new Date().getTime() + "")
+        }, 1000);
+    </script>
+    </body>
+    </html>
+</iframe>
+<div>
+    程序代码
+    <span style="margin:0 20px 0 10px;">全国鲜活信息：<font id="total_active">9172369</font> 条</span>
+    <span style="margin-right:20px;">今日新发信息数：<font id="total_new">28940</font> 条</span>
+    <span>注册用户数：<font id="total_user">3523473</font></span>
+    <script type="text/javascript">
+        var post_freq = 1;
+        var user_freq = 5;
+        setInterval("document.getElementById(\"total_new\").innerHTML = parseInt(document.getElementById(\"total_new\").innerHTML)+1;document.getElementById(\"total_active\").innerHTML = parseInt(document.getElementById(\"total_active\").innerHTML)+1",1000*post_freq);
+        setInterval("document.getElementById(\"total_user\").innerHTML = parseInt(document.getElementById(\"total_user\").innerHTML)+1",1000*user_freq);
+    </script>
+</div>
+</body>
+</html>

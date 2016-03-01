@@ -368,6 +368,8 @@ u>u {
     asrc: url('wallclock.eot');
 }
 
+/*base64   image*/
+
 @font-face {
     font-family: 'WallClock';
     src:

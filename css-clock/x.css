@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #030303;
+}
+#svg{
+    border: 1px solid red;
+    width: auto;
+    height: auto;
+}
+#svg0{
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+#svg1{
+    border: 1px solid red;
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+#svg2{
+    border: 1px solid red;
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+#svg3{
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    clear: both;
+}
+
+
+
+
+
+#code{
+    padding-top: 2px;
+    padding-left: 0.25em;
+    padding-bottom: 2px;
+    padding-right: 0.25em;
+    margin: 1px;
+    color: #204056;
+    border-radius: 2px;
+    border: 1px solid #204056;
+    white-space: nowrap;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    vertical-align: baseline;
+}
+/*Xcolor{*/
+    /*color: #0000E6;*/
+    /*color: #0ff0E6;*/
+    /*color: #d43f3a;*/
+    /*color: #aa00E6;*/
+    /*color: #55ff11;*/
+/*}*/
+
+/*
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+         x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+        <!--reference coordinate start-->
+        <circle r="1" cx="1" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="99" fill="#55ff11"/>
+        <!--left -->
+        <circle r="1" cx="1" cy="10" fill="#55ff11"/>
+        <circle r="1" cx="1" cy="20" fill="#55ff11"/>
+        <circle r="1" cx="1" cy="30" fill="#55ff11"/>
+        <circle r="1" cx="1" cy="40" fill="#55ff11"/>
+        <circle r="1" cx="1" cy="50" fill="#55ff11"/>
+        <circle r="1" cx="1" cy="60" fill="#55ff11"/>
+        <circle r="1" cx="1" cy="70" fill="#55ff11"/>
+        <circle r="1" cx="1" cy="80" fill="#55ff11"/>
+        <circle r="1" cx="1" cy="90" fill="#55ff11"/>
+        <!--top -->
+        <circle r="1" cx="10" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="20" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="30" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="40" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="50" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="60" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="70" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="80" cy="1" fill="#55ff11"/>
+        <circle r="1" cx="90" cy="1" fill="#55ff11"/>
+        <!--right-->
+        <circle r="1" cx="99" cy="10" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="20" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="30" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="40" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="50" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="60" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="70" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="80" fill="#55ff11"/>
+        <circle r="1" cx="99" cy="90" fill="#55ff11"/>
+        <!--bottom-->
+        <circle r="1" cx="10" cy="99" fill="#55ff11"/>
+        <circle r="1" cx="20" cy="99" fill="#55ff11"/>
+        <circle r="1" cx="30" cy="99" fill="#55ff11"/>
+        <circle r="1" cx="40" cy="99" fill="#55ff11"/>
+        <circle r="1" cx="50" cy="99" fill="#55ff11"/>
+        <circle r="1" cx="60" cy="99" fill="#55ff11"/>
+        <circle r="1" cx="70" cy="99" fill="#55ff11"/>
+        <circle r="1" cx="80" cy="99" fill="#55ff11"/>
+        <circle r="1" cx="90" cy="99" fill="#55ff11"/>
+
+        <path stroke="#55ff11"   d="M0,99 0,100z"/>
+
+        <path stroke="#55ff11"   d="M99,0 100,0z"/>
+         <!--reference coordinate end-->
+        <path stroke="#F7931E"   d="M40,20 v20z" />
+        <path stroke="#55ff11"   d="H14z"/>
+        <path stroke="#0ff0E6"   d="V17z"/>
+        <path stroke="#d43f3a"   d="H37z"/>
+
+        <path stroke="#aa00E6" stroke-opacity="0.3" stroke-width="7" d="M0,0 99,99z"/>
+        <path stroke="#aa00E6" stroke-opacity="0.3"  d="M99,0 0,99z"></path>
+
+        <circle r="7" cx="50" cy="50" fill="#55ff11" fill-opacity="0.5"/>
+        <circle r="7" cx="70" cy="70" fill="#55ffaa" fill-opacity="0.7"/>
+        <circle r="7" cx="90" cy="90" fill="#33ff33" fill-opacity="0.5"/>
+        <circle style="r:7; cx:30; cy:30; fill:#33ff33; fill-opacity:1"/>
+
+    </svg>
+
+*/

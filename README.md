@@ -1,5 +1,5 @@
 # xgqfrms.github.io
-<<<<<<< HEAD
+
 ***
 ***
 
@@ -66,7 +66,4 @@ http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
 ### [Creative Commons : CC (知识共享署名 授权许可)](https://creativecommons.org/)
 
 * More coming soon ...
-=======
-my github blog
-###### [:octocat:www.emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com)
->>>>>>> refs/remotes/origin/master
+
